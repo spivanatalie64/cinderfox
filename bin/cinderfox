@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+PROFILE_TEMPLATE="/usr/share/cinderfox/profile"
+PROFILE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/cinderfox/profile"
+DEFAULT_URL="about:home"
+
+find_firefox() {
+  local candidate
+  for candidate in firefox firefox-esr firefox-bin; do
+    if command -v "$candidate" >/dev/null 2>&1; then
+      printf '%s\n' "$candidate"
+      return 0
+    fi
+  done
+
+  printf 'CinderFox: Firefox not found\n' >&2
+  return 1
+}
+
+main() {
+  local firefox_bin
+  local start_url
+  firefox_bin="$(find_firefox)"
+
+  if [ ! -d "$PROFILE_DIR" ] && [ -d "$PROFILE_TEMPLATE" ]; then
+    mkdir -p "$PROFILE_DIR"
+    cp -R "$PROFILE_TEMPLATE/." "$PROFILE_DIR/"
+  fi
+
+  start_url="$DEFAULT_URL"
+
+  if [ "$#" -eq 0 ]; then
+    exec "$firefox_bin" --no-remote --profile "$PROFILE_DIR" "$start_url"
+  fi
+
+  exec "$firefox_bin" --no-remote --profile "$PROFILE_DIR" "$@"
+}
+
+main "$@"

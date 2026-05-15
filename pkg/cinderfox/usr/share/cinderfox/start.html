@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CinderFox</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #08111f;
+        --bg2: #123a7a;
+        --panel: rgba(8, 17, 31, 0.82);
+        --text: #f8fafc;
+        --muted: #cbd5e1;
+        --accent: #38bdf8;
+        --warm: #f97316;
+      }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 18% 14%, rgba(56, 189, 248, 0.20), transparent 22%),
+          radial-gradient(circle at 84% 18%, rgba(249, 115, 22, 0.20), transparent 18%),
+          linear-gradient(135deg, var(--bg), var(--bg2));
+        display: grid;
+        place-items: center;
+      }
+      main {
+        width: min(760px, calc(100vw - 32px));
+        padding: 40px;
+        border: 1px solid rgba(248, 250, 252, 0.12);
+        border-radius: 28px;
+        background: linear-gradient(180deg, rgba(8, 17, 31, 0.92), rgba(8, 17, 31, 0.76));
+        box-shadow: 0 24px 64px rgba(2, 6, 23, 0.42);
+        backdrop-filter: blur(14px);
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 18px;
+        align-items: center;
+      }
+      .brand {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      .mark {
+        width: 72px;
+        height: 72px;
+        border-radius: 24px;
+        background:
+          radial-gradient(circle at 30% 30%, rgba(255,255,255,.16), transparent 28%),
+          linear-gradient(135deg, var(--warm), #dc2626 62%, #7c2d12);
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,.10), 0 12px 28px rgba(249, 115, 22, 0.16);
+        position: relative;
+        flex: 0 0 auto;
+      }
+      .mark::after {
+        content: "";
+        position: absolute;
+        inset: 17px 19px 19px;
+        border: 3px solid rgba(248, 250, 252, 0.94);
+        border-top: 0;
+        border-radius: 10px 10px 16px 16px;
+        transform: rotate(45deg) scale(1.03);
+      }
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        letter-spacing: -0.04em;
+      }
+      p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+      .lede {
+        max-width: 62ch;
+        font-size: 1rem;
+        margin-top: 8px;
+      }
+      .stack {
+        display: grid;
+        gap: 12px;
+      }
+      .eyebrow {
+        display: inline-flex;
+        width: fit-content;
+        gap: 8px;
+        align-items: center;
+        padding: 7px 11px;
+        border-radius: 999px;
+        background: rgba(56, 189, 248, 0.08);
+        color: #dbeafe;
+        border: 1px solid rgba(56, 189, 248, 0.16);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 24px;
+      }
+      .card {
+        padding: 14px 15px;
+        border-radius: 16px;
+        background: rgba(2, 6, 23, 0.18);
+        border: 1px solid rgba(248, 250, 252, 0.10);
+      }
+      .label {
+        display: block;
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(203, 213, 225, 0.84);
+        margin-bottom: 8px;
+      }
+      .value {
+        font-size: 1rem;
+        color: var(--text);
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+      a {
+        color: var(--text);
+        text-decoration: none;
+        border: 1px solid rgba(248, 250, 252, 0.14);
+        background: rgba(2, 6, 23, 0.16);
+        padding: 11px 14px;
+        border-radius: 999px;
+      }
+      a:hover {
+        border-color: var(--accent);
+        background: rgba(56, 189, 248, 0.12);
+      }
+      @media (max-width: 760px) {
+        main { padding: 28px; }
+        .hero { grid-template-columns: 1fr; }
+        .grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="hero">
+        <div class="brand">
+          <div class="mark" aria-hidden="true"></div>
+          <div>
+            <div class="eyebrow">AcreetionOS browser surface</div>
+            <h1>CinderFox</h1>
+          </div>
+        </div>
+        <div class="stack">
+          <p class="lede">
+            This launcher opens Firefox with a home surface and chrome styling tuned to feel like a
+            native part of AcreetionOS instead of a generic browser tab.
+          </p>
+          <p>
+            Dark blue, signal blue, and warm orange accents keep the browser aligned with the rest
+            of the desktop.
+          </p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <span class="label">Browser</span>
+          <span class="value">Firefox profile themed with userChrome and userContent</span>
+        </div>
+        <div class="card">
+          <span class="label">Surface</span>
+          <span class="value">Dark blue glass with warm orange accents</span>
+        </div>
+        <div class="card">
+          <span class="label">Mode</span>
+          <span class="value">Dedicated wrapper, not a Firefox rebuild</span>
+        </div>
+      </div>
+      <div class="links">
+        <a href="https://acreetionos.org">AcreetionOS Home</a>
+        <a href="https://acreetionos.org/wiki.html">Wiki</a>
+        <a href="https://acreetionos.org/downloads.html">Downloads</a>
+      </div>
+    </main>
+  </body>
+</html>

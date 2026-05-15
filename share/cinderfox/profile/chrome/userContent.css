@@ -1,0 +1,74 @@
+@-moz-document url-prefix("about:home"), url-prefix("about:newtab") {
+  :root {
+    color-scheme: dark !important;
+  }
+
+  body,
+  .outer-wrapper,
+  .activity-stream {
+    background: transparent !important;
+  }
+
+  body {
+    background:
+      radial-gradient(circle at top, rgba(249, 115, 22, 0.32), transparent 28%),
+      radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.14), transparent 25%),
+      linear-gradient(135deg, #0f172a, #1d4ed8) !important;
+    color: #f8fafc !important;
+  }
+
+  .search-wrapper .search-inner-wrapper,
+  .abouthome-searchbar,
+  .search-wrapper input {
+    background: rgba(15, 23, 42, 0.88) !important;
+    color: #f8fafc !important;
+    border: 1px solid rgba(56, 189, 248, 0.34) !important;
+    border-radius: 999px !important;
+  }
+
+  .search-wrapper .search-inner-wrapper {
+    box-shadow: 0 16px 40px rgba(2, 6, 23, 0.18) !important;
+  }
+
+  .logo-and-wordmark,
+  .wordmark,
+  .top-sites,
+  .activity-stream,
+  .search-handoff-button {
+    color: #f8fafc !important;
+  }
+
+  .section-title,
+  .promo, .outer-wrapper {
+    color: #cbd5e1 !important;
+  }
+
+  .top-sites-list,
+  .top-site-outer,
+  .top-site-button,
+  .context-menu-list {
+    background: rgba(15, 23, 42, 0.28) !important;
+  }
+
+  .top-site-outer,
+  .card,
+  .collapsible-section,
+  .section-title,
+  .info-panel {
+    border-color: rgba(248, 250, 252, 0.12) !important;
+  }
+
+  .search-wrapper .search-button,
+  .search-wrapper .search-button:hover,
+  .top-site-button,
+  .top-site-button:hover {
+    background: rgba(248, 250, 252, 0.08) !important;
+    color: #f8fafc !important;
+    border-color: rgba(56, 189, 248, 0.25) !important;
+  }
+
+  .top-site-outer:hover,
+  .top-site-button:hover {
+    background: rgba(56, 189, 248, 0.12) !important;
+  }
+}

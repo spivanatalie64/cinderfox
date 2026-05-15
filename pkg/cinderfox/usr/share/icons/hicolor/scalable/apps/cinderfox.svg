@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">CinderFox icon</title>
+  <desc id="desc">A stylized fox icon in AcreetionOS-inspired colors</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#08111f"/>
+      <stop offset="100%" stop-color="#123a7a"/>
+    </linearGradient>
+    <linearGradient id="fox" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fdba74"/>
+      <stop offset="55%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+  </defs>
+  <rect x="24" y="24" width="464" height="464" rx="120" fill="url(#bg)"/>
+  <path d="M142 152l70 18 44-56 44 56 70-18-28 80 38 64-74 0-50 84-50-84-74 0 38-64z" fill="url(#fox)"/>
+  <path d="M182 258l74 66 74-66-14 86-60 34-60-34z" fill="#f8fafc" opacity="0.94"/>
+  <circle cx="214" cy="242" r="14" fill="#08111f"/>
+  <circle cx="298" cy="242" r="14" fill="#08111f"/>
+  <path d="M228 290c12 10 44 10 56 0" fill="none" stroke="#08111f" stroke-width="10" stroke-linecap="round"/>
+  <path d="M168 366c30 14 146 14 176 0" fill="none" stroke="#38bdf8" stroke-width="12" stroke-linecap="round" opacity="0.9"/>
+</svg>

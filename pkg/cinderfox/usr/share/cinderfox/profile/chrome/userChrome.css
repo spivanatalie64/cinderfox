@@ -1,0 +1,148 @@
+/* AcreetionOS-inspired Firefox chrome styling */
+
+:root {
+  --cinderfox-bg: #0f172a;
+  --cinderfox-bg2: #1d4ed8;
+  --cinderfox-panel: #111c33;
+  --cinderfox-accent: #38bdf8;
+  --cinderfox-warm: #f97316;
+  --toolbar-field-background-color: #0b1220 !important;
+  --toolbar-field-focus-background-color: #111c33 !important;
+  --toolbar-field-color: #f8fafc !important;
+  --toolbar-color: #f8fafc !important;
+}
+
+#navigator-toolbox,
+#titlebar,
+#TabsToolbar,
+#nav-bar {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(29, 78, 216, 0.96)) !important;
+  color: #f8fafc !important;
+}
+
+#navigator-toolbox {
+  border-bottom: 1px solid rgba(248, 250, 252, 0.08) !important;
+  box-shadow: 0 1px 0 rgba(56, 189, 248, 0.12) inset !important;
+}
+
+#TabsToolbar {
+  padding-top: 2px !important;
+  padding-bottom: 1px !important;
+  min-height: 38px !important;
+}
+
+.tabbrowser-tab {
+  margin-inline: 1px !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-content {
+  background:
+    linear-gradient(180deg, rgba(248, 250, 252, 0.16), rgba(248, 250, 252, 0.10)) !important;
+  color: #f8fafc !important;
+  border-radius: 8px 8px 0 0 !important;
+  box-shadow: inset 0 -3px 0 var(--cinderfox-accent) !important;
+}
+
+.tabbrowser-tab:not([selected="true"]) .tab-content {
+  background: rgba(2, 6, 23, 0.14) !important;
+  color: rgba(248, 250, 252, 0.9) !important;
+  border-radius: 8px 8px 0 0 !important;
+}
+
+#tabs-newtab-button,
+#alltabs-button,
+.toolbarbutton-1 {
+  color: #f8fafc !important;
+}
+
+#tabs-newtab-button:hover,
+#alltabs-button:hover,
+.toolbarbutton-1:hover {
+  background: rgba(248, 250, 252, 0.10) !important;
+}
+
+.tabbrowser-tab:hover .tab-content {
+  background: rgba(248, 250, 252, 0.06) !important;
+}
+
+#nav-bar {
+  padding-inline: 8px !important;
+  padding-block: 2px !important;
+}
+
+#nav-bar > .toolbarbutton-1,
+#nav-bar .toolbaritem-combined-buttons {
+  margin-inline: 1px !important;
+}
+
+#urlbar-container {
+  max-width: 60vw !important;
+}
+
+#urlbar-background,
+#searchbar,
+.searchbar-textbox {
+  background: rgba(15, 23, 42, 0.96) !important;
+  border: 1px solid rgba(248, 250, 252, 0.14) !important;
+  color: #f8fafc !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.16) !important;
+}
+
+#urlbar[focused="true"] #urlbar-background {
+  border-color: var(--cinderfox-accent) !important;
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.28) !important;
+}
+
+#identity-box,
+#star-button,
+#tracking-protection-icon-container,
+.toolbarbutton-1 {
+  color: #f8fafc !important;
+}
+
+#back-button:hover,
+#forward-button:hover,
+.toolbarbutton-1:hover {
+  background: rgba(248, 250, 252, 0.10) !important;
+}
+
+#back-button,
+#forward-button,
+#reload-button,
+#stop-button {
+  border-radius: 10px !important;
+}
+
+#urlbar-input-container {
+  padding-inline: 6px !important;
+}
+
+#identity-box,
+#urlbar-search-mode-indicator,
+#userContext-label {
+  color: #f8fafc !important;
+}
+
+#urlbar[breakout-extend="true"] #urlbar-background {
+  background: rgba(15, 23, 42, 0.96) !important;
+}
+
+#PlacesToolbar,
+#PersonalToolbar {
+  background: rgba(15, 23, 42, 0.92) !important;
+}
+
+#PersonalToolbar {
+  display: none !important;
+}
+
+#nav-bar toolbarbutton:not(:hover),
+#TabsToolbar toolbarbutton:not(:hover) {
+  fill: #f8fafc !important;
+}
+
+#TabsToolbar-customization-target,
+#nav-bar-customization-target {
+  padding-inline: 4px !important;
+}

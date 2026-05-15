@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=CinderFox
+Comment=Firefox with AcreetionOS branding
+Exec=cinderfox %U
+Icon=cinderfox
+Terminal=false
+Categories=Network;WebBrowser;
+StartupNotify=true
+StartupWMClass=CinderFox
